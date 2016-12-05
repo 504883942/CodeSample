@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    IEnumerable<Code_t> codes = ViewBag.data;
+}
+ 
+<table>
+    @foreach (var i in codes)
+    {
+        <tr>
+            <td>
+                <h3><a href="/home/detail?id=@i.Id&href=@("https://code.msdn.microsoft.com/" + i.link)">@i.Title</a></h3>
+                <p>@i.SummaryBox</p>
+
+
+
+                @i.CustomerContribution
+            </td>
+            <td>
+          
+                
+                @foreach (var tag in i.Tags)
+                {
+                    <a  href="/home/index?keyword=@tag">
+                        @tag
+                    </a>
+                }
+            </td>
+            <td>
+                    <a class="btn btn-primary btn-sm" onclick="rating(@i.Id)">赞 @(i.score)</a> 
+            </td>
+        </tr>
+    }
+</table>
+@section scripts{
+    <script>
+        function rating(id) {
+            $.post("/home/rating", { id: id }).success(function (data) {
+                alert(data);
+                history.go(0) 
+            })
+        }
+    </script>
+}
