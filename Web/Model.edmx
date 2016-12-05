@@ -71,7 +71,7 @@
           <Property Name="Page" Type="Int32" Nullable="false" />
           <Property Name="State" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="CodeSampleEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CodeSampleEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Code_t" EntityType="Self.Code_t" />
           <EntitySet Name="Search_t" EntityType="Self.Search_t" />
           <EntitySet Name="Task_t" EntityType="Self.Task_t" />
@@ -81,7 +81,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CodeSampleModelStoreContainer" CdmEntityContainer="CodeSampleEntities1">
+        <EntityContainerMapping StorageEntityContainer="CodeSampleModelStoreContainer" CdmEntityContainer="CodeSampleEntities">
           <EntitySetMapping Name="Code_t">
             <EntityTypeMapping TypeName="CodeSampleModel.Code_t">
               <MappingFragment StoreEntitySet="Code_t">

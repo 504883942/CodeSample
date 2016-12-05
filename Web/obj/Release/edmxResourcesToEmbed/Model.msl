@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CodeSampleModelStoreContainer" CdmEntityContainer="CodeSampleEntities1">
+    <EntitySetMapping Name="Code_t">
+      <EntityTypeMapping TypeName="CodeSampleModel.Code_t">
+        <MappingFragment StoreEntitySet="Code_t">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="CustomerContribution" ColumnName="CustomerContribution" />
+          <ScalarProperty Name="SummaryBox" ColumnName="SummaryBox" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Viewer" ColumnName="Viewer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Search_t">
+      <EntityTypeMapping TypeName="CodeSampleModel.Search_t">
+        <MappingFragment StoreEntitySet="Search_t">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Search" ColumnName="Search" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Task_t">
+      <EntityTypeMapping TypeName="CodeSampleModel.Task_t">
+        <MappingFragment StoreEntitySet="Task_t">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Page" ColumnName="Page" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

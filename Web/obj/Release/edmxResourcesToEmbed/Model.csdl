@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CodeSampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Code_t">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="link" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustomerContribution" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="SummaryBox" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Rating" Type="Int32" />
+    <Property Name="Viewer" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Search_t">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Search" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Task_t">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Page" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CodeSampleEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Code_t" EntityType="Self.Code_t" />
+    <EntitySet Name="Search_t" EntityType="Self.Search_t" />
+    <EntitySet Name="Task_t" EntityType="Self.Task_t" />
+  </EntityContainer>
+</Schema>
